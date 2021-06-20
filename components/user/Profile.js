@@ -23,9 +23,11 @@ const Profile = () => {
     const { name, email, password } = user
 
     const [avatar, setAvatar] = useState('');
+
     const [avatarPreview, setAvatarPreview] = useState('/images/default_avatar.jpg');
 
     const { user: loadedUser, loading } = useSelector(state => state.loadedUser)
+
     const { error, isUpdated, loading: updateLoading } = useSelector(state => state.user)
 
     useEffect(() => {
@@ -34,7 +36,8 @@ const Profile = () => {
             setUser({
                 name: loadedUser.name,
                 email: loadedUser.email
-            })
+            });
+
             setAvatarPreview(loadedUser.avatar.url)
         }
 

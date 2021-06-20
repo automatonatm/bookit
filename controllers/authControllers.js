@@ -56,6 +56,8 @@ const currentUserProfile = catchAsyncErrors(async (req, res) => {
 
 })
 
+
+
 // Update user profile   =>   /api/me/update
 const updateProfile = catchAsyncErrors(async (req, res) => {
 

@@ -12,6 +12,7 @@ const Header = () => {
     const { user, loading } = useSelector(state => state.loadedUser)
 
     useEffect(() => {
+
         if (!user) {
             dispatch(loadUser())
         }

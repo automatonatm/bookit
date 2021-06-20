@@ -12,8 +12,7 @@ dbConnect();
 
 handler.get(getSingleRoom)
 
-handler
-    .use(isAuthenticatedUser, authorizeRoles('admin'))
+handler.use(isAuthenticatedUser, authorizeRoles('admin'))
     .put(updateRoom)
 
 handler
